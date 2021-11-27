@@ -1,14 +1,14 @@
 export const NavBar = () => {
     return( 
-        <nav class="navbar navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">E-Commerce</a>
+                <h2><a class="navbar-brand" href="#">NavBar</a></h2>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">E-Commerce</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">NavBar</h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">

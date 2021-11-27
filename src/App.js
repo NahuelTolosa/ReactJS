@@ -1,9 +1,16 @@
-import {NavBar} from './components/NavBar/NavBar';
+import {NavBar} from './Components/NavBar/NavBar';
+import {Footer} from './Components/Footer/Footer';
 
 function App() {
+
+  const saludo = "Hola Main";
+  const texto = "Un texto"
+
   return (
     <div className="App">
       <NavBar />
+      
+      <Footer />
     </div>
   );
 }
