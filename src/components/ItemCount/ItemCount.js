@@ -6,7 +6,13 @@ export const ItemCount = ({stock}) => {
     let [clicks, setClicks] = useState(0);
 
     const increaseClicks = () => {
-        (clicks < stock) ? setClicks(clicks + 1) : (alert(`Solo hay stock de ${stock} artículos.`));
+        (stock == 0) ? 
+        (alert(`No hay stock disponible.`)) :
+        (   
+            (clicks < stock) ? 
+            setClicks(clicks + 1) : 
+            (alert(`Solo hay stock de ${stock} artículos.`))
+        );
     }
 
     const decreaseClicks = () => {
