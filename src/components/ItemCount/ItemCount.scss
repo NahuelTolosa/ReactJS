@@ -1,0 +1,58 @@
+.item-container {
+    width: 20%;
+    min-height: 5vh;
+    margin: 5% auto;
+    border: 1px solid #80808096;
+    background-color: #80808018;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .item-container__button {
+        width: 15%;
+        display: flex;
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            margin: auto;
+            padding: 0 0 7px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            transition: all 200ms;
+        }
+        button:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    .less {
+        color: #680000ca;
+    }
+
+    .less:hover {
+        color: #a50000c0;
+    }
+
+    .plus {
+        color: #006800ca;
+    }
+
+    .plus:hover {
+        color: #00a500c0;
+    }
+
+    .item-container__number{
+        width: 25%;
+        .number {
+            height: 100%;
+            text-align: center;
+            margin: auto;
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+
+}
