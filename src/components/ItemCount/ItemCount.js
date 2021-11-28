@@ -1,37 +1,24 @@
 import React, {useState} from 'react';
+import { Counter } from '../Hook/Counter';
 import './ItemCount.scss';
 
-export const ItemCount = ({stock}) => {
+export const ItemCount = ({initial=0, stock=0}) => {
 
-    let [clicks, setClicks] = useState(0);
-
-    const increaseClicks = () => {
-        (stock == 0) ? 
-        (alert(`No hay stock disponible.`)) :
-        (   
-            (clicks < stock) ? 
-            setClicks(clicks + 1) : 
-            (alert(`Solo hay stock de ${stock} artículos.`))
-        );
-    }
-
-    const decreaseClicks = () => {
-        (clicks > 0) && (setClicks(clicks - 1));
-    }
+    const {counter,increment,decrement} = Counter(initial,stock);
 
     return (
         <div className='item-container'>
 
             <div className='item-container__button'>
-                <button className = 'less' onClick = {decreaseClicks}>-</button>
+                <button className='less' onClick={decrement}>-</button>
             </div>
 
             <div className = 'item-container__number'>
-                <p className = 'number'>{clicks}</p>
+                <p className='number'>{counter}</p>
             </div>
 
             <div className='item-container__button'>
-                <button className='plus' onClick={increaseClicks}>+</button>
+                <button className='plus' onClick={increment}>+</button>
             </div>
 
         </div>

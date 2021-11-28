@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemCount stock = '10'/>
+      <ItemCount initial={0} stock = {10}/>
       <Footer />
     </div>
   );
