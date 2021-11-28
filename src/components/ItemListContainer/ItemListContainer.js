@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { GetItems } from "../Utils/GetItems";
+import { ItemList } from "../ItemList/ItemList";
 
 export const ItemListContainer = () => {
 
@@ -21,6 +22,6 @@ export const ItemListContainer = () => {
     }, []);
 
     return (
-        <h1>Lectura de arreglo</h1>
+        <ItemList products = {list} />
     );
 }

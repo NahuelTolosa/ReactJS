@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer />
-      <ItemCount initial={0} stock = {10}/>
-      <Footer />
+      {/* <ItemCount initial={0} stock = {10}/> */}
+      {/* <Footer /> */}
     </div>
   );
 }
