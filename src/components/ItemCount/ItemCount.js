@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import './ItemCount.scss';
 
-export const ItemCount = () => {
+export const ItemCount = ({stock}) => {
 
     let [clicks, setClicks] = useState(0);
 
     const increaseClicks = () => {
-        setClicks(clicks + 1);
+        (clicks < stock) ? setClicks(clicks + 1) : (alert(`Solo hay stock de ${stock} artículos.`));
     }
 
     const decreaseClicks = () => {
