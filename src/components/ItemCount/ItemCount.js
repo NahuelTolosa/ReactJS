@@ -16,8 +16,7 @@ export const ItemCount = ({stock}) => {
     }
 
     const decreaseClicks = () => {
-        if (clicks > 0)
-            setClicks(clicks - 1);
+        (clicks > 0) && (setClicks(clicks - 1));
     }
 
     return (
