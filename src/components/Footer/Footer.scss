@@ -1,6 +1,8 @@
 .footer{
-min-height: 20vh;
-    background-color: #808080;
+    background: var(--gradiant);
+    color: var(--color3);
+    padding: 50px 0 75px;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;

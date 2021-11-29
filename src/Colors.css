@@ -1,0 +1,13 @@
+:root{
+    font-size: 20px;
+	--color1: rgb(222, 226, 230);
+    --color2: rgb(22, 22, 22);
+    --color3: rgb(255, 255, 255);
+    --color4: rgb(175, 175, 175,0.1);
+    --color5: rgb(201, 205, 209);
+    --color6: rgb(195, 198, 202);
+    --color7: rgb(24, 24, 24);
+    --color8: rgb(0, 0, 0);
+    --color9: rgba(255, 255, 255, 0.1);
+    --gradiant: linear-gradient(var(--color8), var(--color7));
+}

@@ -1,18 +1,17 @@
 import {NavBar} from './Components/NavBar/NavBar';
 import {Footer} from './Components/Footer/Footer';
-import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer';
-import {ItemCount} from './Components/ItemCount/ItemCount';
-import { ItemDetailsContainer } from './Components/ItemDetailsContainer/ItemDetailsContainer';
+import { Header } from './Components/Header/Header';
+import { Main } from './Components/Main/Main';
+import './Colors.css';
 
 function App() {
 
   return (
     <div className="App">
       <NavBar />
-      < ItemDetailsContainer />
-      <ItemListContainer />
-      {/* <ItemCount initial={0} stock = {10}/> */}
-      {/* <Footer /> */}
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
