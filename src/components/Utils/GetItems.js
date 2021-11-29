@@ -5,3 +5,9 @@ export const GetItems = () => {
         resolve(products);
     });
 }
+
+export const GetItemById = (id) => {
+    return new Promise((resolve, reject) => {
+        resolve(products.find(element => element.id === id));
+    });
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GetItemById } from '../Utils/GetItems';
+import { GetItemById } from '../Utils/GetItems.js';
 import { ItemDetails } from '../ItemDetails/ItemDetails.js'
 
 export const ItemDetailsContainer = () => {
