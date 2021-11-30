@@ -1,3 +1,12 @@
+.main {
+    background: linear-gradient( var(--color6),var(--color1));
+    width: 85%;
+    margin: 30px auto;
+    padding: 2%;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.4);
+    min-height: 40vh;
+}
+
 .title{
     margin: 0;
     text-align: center;
