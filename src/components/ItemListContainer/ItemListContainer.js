@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
 
         GetItems()
             .then((ans) => {
-                setList(ans);
+                setList(ans.filter((el) => el.isPopular === true));
             })
             .catch( (err) => {
                 console.log(err);

@@ -6,7 +6,8 @@ export const products = [
         "price": 3000,
         "image": "img/ropa/B01.jpg",
         "stock": 5,
-        "isPopular": true
+        "isPopular": true,
+        "category": "buzo"
     },
     {
         "id": "B02",
@@ -15,7 +16,8 @@ export const products = [
         "price": 3750,
         "image": "img/ropa/B02.jpg",
         "stock": 10,
-        "isPopular": true
+        "isPopular": true,
+        "category": "buzo"
     },
     {
         "id": "B03",
@@ -24,7 +26,8 @@ export const products = [
         "price": 3600,
         "image": "img/ropa/B03.jpg",
         "stock": 15,
-        "isPopular": false
+        "isPopular": false,
+        "category": "buzo"
     },
     {
         "id": "B04",
@@ -33,7 +36,8 @@ export const products = [
         "price": 3500,
         "image": "img/ropa/B04.jpg",
         "stock": 20,
-        "isPopular": false
+        "isPopular": false,
+        "category": "buzo"
     },
     {
         "id": "B05",
@@ -42,7 +46,8 @@ export const products = [
         "price": 3360,
         "image": "img/ropa/B05.jpg",
         "stock": 2,
-        "isPopular": false
+        "isPopular": false,
+        "category": "buzo"
     },
     {
         "id": "B06",
@@ -51,7 +56,8 @@ export const products = [
         "price": 4000,
         "image": "img/ropa/B06.jpg",
         "stock": 7,
-        "isPopular": false
+        "isPopular": false,
+        "category": "buzo"
     },
     {
         "id": "CP01",
@@ -60,7 +66,8 @@ export const products = [
         "price": 3500,
         "image": "img/ropa/CP01.jpg",
         "stock": 1,
-        "isPopular": true
+        "isPopular": true,
+        "category": "campera"
     },
     {
         "id": "CP02",
@@ -69,7 +76,8 @@ export const products = [
         "price": 5000,
         "image": "img/ropa/CP02.jpg",
         "stock": 0,
-        "isPopular": false
+        "isPopular": false,
+        "category": "campera"
     },
     {
         "id": "CP03",
@@ -78,7 +86,8 @@ export const products = [
         "price": 4780,
         "image": "img/ropa/CP03.jpg",
         "stock": 0,
-        "isPopular": true
+        "isPopular": true,
+        "category": "campera"
     },
     {
         "id": "CP04",
@@ -87,7 +96,8 @@ export const products = [
         "price": 3990,
         "image": "img/ropa/CP04.jpg",
         "stock": 5,
-        "isPopular": false
+        "isPopular": false,
+        "category": "campera"
     },
     {
         "id": "P01",
@@ -96,7 +106,8 @@ export const products = [
         "price": 2560,
         "image": "img/ropa/P01.jpg",
         "stock": 13,
-        "isPopular": true
+        "isPopular": true,
+        "category": "pantalon"
     },
     {
         "id": "P02",
@@ -105,7 +116,8 @@ export const products = [
         "price": 2690,
         "image": "img/ropa/P02.jpg",
         "stock": 17,
-        "isPopular": false
+        "isPopular": false,
+        "category": "pantalon"
     },
     {
         "id": "P03",
@@ -114,7 +126,8 @@ export const products = [
         "price": 2000,
         "image": "img/ropa/P03.jpg",
         "stock": 23,
-        "isPopular": false
+        "isPopular": false,
+        "category": "pantalon"
     },
     {
         "id": "P04",
@@ -123,7 +136,8 @@ export const products = [
         "price": 3290,
         "image": "img/ropa/P04.jpg",
         "stock": 19,
-        "isPopular": true
+        "isPopular": true,
+        "category": "pantalon"
     },
     {
         "id": "P05",
@@ -132,7 +146,8 @@ export const products = [
         "price": 2660,
         "image": "img/ropa/P05.jpg",
         "stock": 9,
-        "isPopular": false
+        "isPopular": false,
+        "category": "pantalon"
     },
     {
         "id": "R01",
@@ -141,7 +156,8 @@ export const products = [
         "price": 1800,
         "image": "img/ropa/R01.jpg",
         "stock": 7,
-        "isPopular": false
+        "isPopular": false,
+        "category": "remera"
     },
     {
         "id": "R02",
@@ -150,7 +166,8 @@ export const products = [
         "price": 1800,
         "image": "img/ropa/R02.jpg",
         "stock": 0,
-        "isPopular": true
+        "isPopular": true,
+        "category": "remera"
     },
     {
         "id": "R03",
@@ -159,7 +176,8 @@ export const products = [
         "price": 1320,
         "image": "img/ropa/R03.jpg",
         "stock": 6,
-        "isPopular": false
+        "isPopular": false,
+        "category": "remera"
     },
     {
         "id": "R04",
@@ -168,7 +186,8 @@ export const products = [
         "price": 1990,
         "image": "img/ropa/R04.jpg",
         "stock": 17,
-        "isPopular": true
+        "isPopular": true,
+        "category": "remera"
     },
     {
         "id": "CI01",
@@ -177,7 +196,8 @@ export const products = [
         "price": 2500,
         "image": "img/ropa/CI01.jpg",
         "stock": 27,
-        "isPopular": true
+        "isPopular": true,
+        "category": "camisa"
     },
     {
         "id": "CI02",
@@ -186,6 +206,7 @@ export const products = [
         "price": 2500,
         "image": "img/ropa/CI02.jpg",
         "stock": 0,
-        "isPopular": false
+        "isPopular": false,
+        "category": "camisa"
     }
 ]
