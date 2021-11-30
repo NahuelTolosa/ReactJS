@@ -65,7 +65,7 @@ export const products = [
         "description": "Campera azul,amarilla y gris",
         "price": 3500,
         "image": "img/ropa/CP01.jpg",
-        "stock": 1,
+        "stock": 8,
         "isPopular": true,
         "category": "campera"
     },
@@ -75,7 +75,7 @@ export const products = [
         "description": "Campera de abrigo negra con capucha",
         "price": 5000,
         "image": "img/ropa/CP02.jpg",
-        "stock": 0,
+        "stock": 1,
         "isPopular": false,
         "category": "campera"
     },
@@ -85,7 +85,7 @@ export const products = [
         "description": "Campera de jean azul",
         "price": 4780,
         "image": "img/ropa/CP03.jpg",
-        "stock": 0,
+        "stock": 31,
         "isPopular": true,
         "category": "campera"
     },
@@ -165,7 +165,7 @@ export const products = [
         "description": "Remera ajustada gris con estampado pequeño rosa",
         "price": 1800,
         "image": "img/ropa/R02.jpg",
-        "stock": 0,
+        "stock": 1,
         "isPopular": true,
         "category": "remera"
     },
@@ -205,7 +205,7 @@ export const products = [
         "description": "Camisa texturizada gris",
         "price": 2500,
         "image": "img/ropa/CI02.jpg",
-        "stock": 0,
+        "stock": 1,
         "isPopular": false,
         "category": "camisa"
     }

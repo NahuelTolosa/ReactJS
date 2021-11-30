@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import { Counter } from '../Hook/Counter';
+import { useCounter } from '../Hook/useCounter';
 import './ItemCount.scss';
 
-export const ItemCount = ({initial=0, stock=0}) => {
-
-    const {counter,increment,decrement} = Counter(initial,stock);
+export const ItemCount = ({ increment, decrement, onAdd, counter}) => {
 
     return (
         <div className = 'button-container'>
@@ -18,14 +16,14 @@ export const ItemCount = ({initial=0, stock=0}) => {
                     <p className='number'>{counter}</p>
                 </div>
 
-                <div className='item-container__button'>
-                    <button className='plus' onClick={increment}>+</button>
+                <div className='item-container__button' onClick={increment}>
+                    <button className='plus'>+</button>
                 </div>
 
             </div>
 
             <div className='item-container__add option'>
-                <button className='add'>Agregar al carrito</button>
+                <button className='add' onClick={onAdd}>Agregar al carrito</button>
             </div>
         </div>
         
