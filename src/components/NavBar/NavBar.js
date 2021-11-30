@@ -1,4 +1,5 @@
 import { CartWidget } from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
     return(
@@ -7,23 +8,24 @@ export const NavBar = () => {
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="#">E-Commerce</a>
+                <Link class="navbar-brand" to='/'>E-Commerce</Link>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link class="nav-link active" to='/'>Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
+                            <Link class="nav-link" to='/products'>Products</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <Link class="nav-link" to='/about'>About Us</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <Link class="nav-link" to='/contact'>Contact</Link>
                         </li>
                     </ul>
-                    <CartWidget />
+                    <Link to='/cart'><CartWidget /></Link>
+                    
                 </div>
             </div>
         </nav>
