@@ -1,6 +1,6 @@
 import React from 'react';
 import './Colors.css';
-import { NavBar } from './components/NavBar/navBar';
+import { NavBar } from './components/navBar/navBar';
 import { Footer } from './components/Footer/footer';
 import { Header } from './components/Header/header';
 import { CartView } from './components/CartView/cartView';
