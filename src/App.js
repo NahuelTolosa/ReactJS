@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './Colors.css';
+import React from 'react';
 import { NavBar } from './components/navBar/navBar';
 import { Footer } from './components/Footer/footer';
 import { Header } from './components/Header/header';
@@ -8,20 +7,13 @@ import { AboutUs } from './components/AboutUs/aboutUs';
 import { ContactView } from './components/ContactView/contactView';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { cartContext } from './context/cartContext';
+import { CartProvider } from './context/cartContext';
+import './Colors.css';
 
 function App() {
 
-  const [cart,setCart] = useState([]);
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  }
-
-  console.log(cart);
-
   return (
-    <cartContext.Provider value = {{cart, addToCart}}>
+    <CartProvider>
 
       <BrowserRouter>
 
@@ -40,8 +32,7 @@ function App() {
 
       </BrowserRouter>
 
-    </cartContext.Provider>
-
+    </CartProvider>
   );
 }
 

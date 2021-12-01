@@ -6,7 +6,7 @@ import { cartContext } from "../../context/cartContext";
 
 export const Item = ({product}) => {
 
-    const { addToCart } = useContext(cartContext);
+    const { addToCart, isOnCart } = useContext(cartContext);
 
     const { counter, increment, decrement } = useCounter(1, product.stock);
 
@@ -18,7 +18,12 @@ export const Item = ({product}) => {
             description: product.description,
             quantity: counter
         });
+        alert('Producto agregado al carrito.');
     }
+
+    const checkCart = (id) => {
+        return isOnCart(id);
+    } 
 
     return (
         <div className = 'img-containter'>
@@ -32,6 +37,8 @@ export const Item = ({product}) => {
                     increment ={increment} 
                     decrement={decrement} 
                     onAdd={handlerAdd}
+                    checkCart={checkCart}
+                    product={product}
                     counter={counter}
                 />
             </div>

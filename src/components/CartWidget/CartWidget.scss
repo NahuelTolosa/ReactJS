@@ -1,3 +1,25 @@
 .cartWidget {
+    display: flex;
     transform: scale(1.8);
+    color: #000;
+    transition: all 200ms;
+}
+.cartWidget:hover {
+    transform: scale(1.85);
+    color: #111;
+}
+
+.counter-icon {
+    color: #eee;
+    border: 2px solid #fff;
+    transform: scale(0.7);
+    text-align: center;
+    padding: auto;
+    width: 20px;
+    border-radius: 100px;
+    background-color: #888;
+    font-size: 0.5rem;
+    position: relative;
+    right: 9px;
+    bottom: 7px;
 }

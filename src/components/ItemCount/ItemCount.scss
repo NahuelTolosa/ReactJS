@@ -54,16 +54,19 @@
 
     }
 
-    .item-container__add{
+    .item-container__option{
         width: 85%;
         margin: auto;
         border-radius: 15px;
         display: flex;
         justify-content: center;
-        .add{
+        .option__button{
             font-size: 1rem !important;
             padding: 15px;
             margin: auto;
+            text-decoration: none;
+            color: #000;
+            transition: all 200ms;
         }
     }
     
@@ -86,7 +89,10 @@ button {
     transition: all 200ms;
 }
 
-.item-container__add:hover{
+.item-container__option:hover{
     border: 1px solid #80808096;
     background-color: #80808031;
+    .option__button{
+        font-weight: bold;
+    }
 }
