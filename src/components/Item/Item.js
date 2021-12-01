@@ -18,7 +18,7 @@ export const Item = ({product}) => {
             description: product.description,
             quantity: counter
         });
-        alert('Producto agregado al carrito.');
+        // alert('Producto agregado al carrito.');
     }
 
     const checkCart = (id) => {

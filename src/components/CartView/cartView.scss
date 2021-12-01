@@ -37,6 +37,10 @@
         }
     }
 
+    .cart-header {
+        font-weight: bold;
+    }
+
     .cart-body {
         display: flex;
         flex-direction: column;
@@ -77,4 +81,32 @@
         background-color: rgba(148, 148, 148, 0.6);
         transform: scale(1.005);
     }
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .total__title {
+        width: 25%;
+    }
+
+    .total__price {
+        font-weight: bold;
+        width: 25%;
+    }
+
+    div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            margin: auto;
+        }
+        
+    }
+
 }
