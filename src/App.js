@@ -12,10 +12,16 @@ import { cartContext } from './context/cartContext';
 
 function App() {
 
-  const {cart,setcart} = useState([]);
+  const [cart,setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  }
+
+  console.log(cart);
 
   return (
-    <cartContext.Provider value = {cart}>
+    <cartContext.Provider value = {{cart, addToCart}}>
 
       <BrowserRouter>
 

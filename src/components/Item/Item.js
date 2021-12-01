@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import './Item.scss';
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useCounter } from "../Hook/useCounter";
+import { cartContext } from "../../context/cartContext";
 
 export const Item = ({product}) => {
+
+    const { addToCart } = useContext(cartContext);
 
     const { counter, increment, decrement } = useCounter(1, product.stock);
 
     const handlerAdd = () => {
-        console.log({
+        addToCart({
             id: product.id,
-            id: product.name,
-            id: product.price,
-            id: product.description,
+            name: product.name,
+            price: product.price,
+            description: product.description,
             quantity: counter
-        })
+        });
     }
 
     return (
