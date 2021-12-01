@@ -5,12 +5,12 @@ import './cartView.scss';
 
 export const CartView = () => {
 
-    const {cart} = useContext(cartContext);
+    const {cart, totalCart, emptyCart, deleteProduct} = useContext(cartContext);
+    
     return (
         <main className='main'>
             <h2 className='title'>Carrito de compras</h2>
             <hr/>
-
             <div className = 'cart-header'>
 
                 <div className = 'item'>
@@ -30,8 +30,12 @@ export const CartView = () => {
                 </div>
 
             </div>
+            <hr />
 
-            <div className='cart-body'>
+        {
+            (cart.length == 0)
+            ? <h4 className='title'>No hay elementos en el carrito</h4>
+            : <div className='cart-body'>
                 {
                     cart.map((el) =>(
                         <div key={el.id} className='cart-item'>
@@ -44,13 +48,21 @@ export const CartView = () => {
                             <div className='item'>
                                 <p>${el.price}</p>
                             </div>
-                            <div className='item'>
+                            <div className='item' onClick={() => deleteProduct(el.id)}>
                                 <span><BsFillTrashFill /></span>
                             </div>
                         </div>
                     ))
                 }
+
+                {/* ToDo: AGREGAR EL TOTAL DEL VALOR DEL CARRITO*/}
+
+                <div className= 'empty-cart'>
+                            <button className='empty-button' onClick={emptyCart}>Vaciar Carrito</button>
+                </div>
             </div>
+
+        }
         </main>
         
     );
