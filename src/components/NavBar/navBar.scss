@@ -8,6 +8,36 @@ button{
     width: fit-content;
 }
 
+.dollar-section {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    font-size: .7rem;
+    font-weight: bold;
+
+    .dollar-section__type {
+        width: 40%; 
+        margin: auto;
+    }
+    .dollar-section__values {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+
+        p {
+            margin: auto;
+        }
+    }
+}
+.dollar-item {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and(min-width: 992px){
 
     .navbar-collapse {

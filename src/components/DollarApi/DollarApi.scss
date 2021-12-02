@@ -1,0 +1,23 @@
+.dollar {
+    font-size: .6rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .dollar__type {
+        --type_widht: 40%;
+        width: 40%;
+    }
+
+    .dollar__data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        --items: 2;
+        p{
+            padding: 0;
+            width: calc(100% / var(--items));
+        }
+    }
+}

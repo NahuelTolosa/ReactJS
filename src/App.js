@@ -8,11 +8,13 @@ import { ContactView } from './components/ContactView/contactView';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { CartProvider } from './context/cartContext';
+
 import './Colors.css';
 
 function App() {
 
   return (
+
     <CartProvider>
 
       <BrowserRouter>

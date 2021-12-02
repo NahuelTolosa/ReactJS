@@ -1,6 +1,7 @@
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import './navBar.scss';
+import { DollarApi } from "../DollarApi/DollarApi";
 
 export const NavBar = () => {
     return(
@@ -34,6 +35,24 @@ export const NavBar = () => {
                             <Link class="nav-link" to='/contact'>Contact</Link>
                         </li>
                     </ul>
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cotización del Dólar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div className = 'dollar-section'>
+                                <p className='dollar-section__type'>Tipo</p>
+                                <div className='dollar-section__values'>
+                                    <p>Compra</p>
+                                    <p>Venta</p>
+                                </div>
+                            </div>
+                            <hr/>
+                            <li className = 'dollar-item'><DollarApi value='official'/></li>
+                            <li className='dollar-item'><DollarApi value='blue'/></li>
+                        </ul>
+                    </div>
 
                     <Link className='cart-logo' to='/cart'><CartWidget /></Link>
                 </div>
