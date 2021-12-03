@@ -1,27 +1,36 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { GetItems } from "../Utils/GetItems";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from 'react-router';
 import './ItemListContainer.scss';
+import {database} from '../Firebase/config';
+import { collection, getDocs, query, where} from 'firebase/firestore/lite';
 
 export const ItemListContainer = () => {
 
     const [list,setList] = useState([]);
     const { category } = useParams();
 
-    useEffect( () => {
+    useEffect(async() => {
 
-        GetItems()
-            .then((ans) => {
-                (category)
-                ? setList(ans.filter((el) => el.category === category))
-                : setList(ans);
+        const _query = category 
+                        ? query(collection(database, 'products'), where('category', '==', category))
+                        : collection(database, 'products');
+
+        getDocs(_query)
+            .then(ans => {
+                const products = ans.docs.map((el) => {
+                    return {
+                        id: el.id,
+                        ...el.data()
+                    }
+                });
+
+                setList(products);
+                console.log(products);
             })
-            .catch( (err) => {
-                console.log(err);
-            });
+            .catch('Error...');
 
     }, [category]);
 
