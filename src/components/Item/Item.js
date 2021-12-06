@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import './Item.scss';
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useCounter } from "../Hook/useCounter";
-import { cartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/CartContext";
 
 export const Item = ({product}) => {
 
-    const { addToCart, isOnCart } = useContext(cartContext);
+    const { addToCart, isOnCart } = useContext(CartContext);
 
     const { counter, increment, decrement } = useCounter(1, product.stock);
 

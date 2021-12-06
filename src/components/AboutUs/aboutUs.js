@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { cartContext } from '../../context/cartContext';
+import { CartContext } from '../../context/CartContext';
 import './aboutUs.scss';
 
 export const AboutUs = () => {
 
-    console.log(useContext(cartContext));
+    console.log(useContext(CartContext));
 
     return (
         <main className='main'>

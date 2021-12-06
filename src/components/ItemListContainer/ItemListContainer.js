@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from 'react-router';
 import './ItemListContainer.scss';
-import {database} from '../Firebase/config';
+import {database} from '../Firebase/Config';
 import { collection, getDocs, query, where} from 'firebase/firestore/lite';
 
 export const ItemListContainer = () => {

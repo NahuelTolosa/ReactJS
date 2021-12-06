@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { cartContext } from '../../context/cartContext';
+import { CartContext } from '../../context/CartContext';
 import { BsFillTrashFill } from "react-icons/bs";
 import './cartView.scss';
 
 export const CartView = () => {
 
-    const {cart, totalCart, emptyCart, deleteProduct} = useContext(cartContext);
+    const {cart, totalCart, emptyCart, deleteProduct} = useContext(CartContext);
     
     return (
         <main className='main'>

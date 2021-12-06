@@ -1,13 +1,13 @@
 import React from 'react';
-import { NavBar } from './components/navBar/navBar';
-import { Footer } from './components/Footer/footer';
-import { Header } from './components/Header/header';
-import { CartView } from './components/CartView/cartView';
-import { AboutUs } from './components/AboutUs/aboutUs';
-import { ContactView } from './components/ContactView/contactView';
+import { NavBar } from './components/NavBar/NavBar';
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { CartView } from './components/CartView/CartView';
+import { AboutUs } from './components/AboutUs/AboutUs';
+import { ContactView } from './components/ContactView/ContactView';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { CartProvider } from './context/cartContext';
+import { CartProvider } from './context/CartContext';
 import './Colors.css';
 
 function App() {
