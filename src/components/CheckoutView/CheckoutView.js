@@ -1,23 +1,31 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import {Timestamp,collection,addDoc} from 'firebase/firestore/lite';
+import { database } from '../Firebase/Config';
 
 export const CheckoutView = () => {
 
-    const {cart} = useContext(CartContext);
+    const { cart, totalCart} = useContext(CartContext);
 
     const createOreder = () => {
         const order = {
             buyer: {
-                name: 'aaa',
-                email: 'aaa@aaa.com',
+                name: 'Cliente',
+                email: 'cliente@mail.com',
                 phone: '2235777777'
 
             },
-            items: cart
-        }
-        console.log(order);
-    }
+            items: cart,
+            total: totalCart(),
+            date: Timestamp.fromDate(new Date())
+        }    
 
+        const ordersRef = collection(database,'orders');
+
+        addDoc(ordersRef, order)
+            .then((ans) => alert('Orden realizada con éxito'));
+
+    }
     return (
 
         <div>
