@@ -28,7 +28,7 @@ export const ItemListContainer = () => {
                 });
 
                 setList(products);
-                console.log(products);
+                // console.log(products);
             })
             .catch('Error...');
 
