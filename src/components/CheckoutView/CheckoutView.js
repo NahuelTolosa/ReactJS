@@ -9,20 +9,13 @@ export const CheckoutView = () => {
 
     const [orderID,setOrderID] = useState(null);
 
-    const [name,setName] = useState('');
-    const [mail,setMail] = useState('');
-    const [phone,setPhone] = useState('');
+    const [values, setValues] = useState({name:'',mail:'',phone:''});
 
     const { cart, totalCart, emptyCart} = useContext(CartContext);
 
-    const createOreder = () => {
+    const createOreder = (buyer) => {
         const order = {
-            buyer: {
-                name: name,
-                email: mail,
-                phone: phone
-
-            },
+            buyer: buyer,
             items: cart,
             total: totalCart(),
             date: Timestamp.fromDate(new Date())
@@ -38,21 +31,18 @@ export const CheckoutView = () => {
 
     }
 
-    const handleName = (e) => {
-        setName(e.target.value);
-    }
+    const handleValues = (e) => {
 
-    const handleMail = (e) => {
-        setMail(e.target.value);
-    }
+        setValues({
+            ...values,
+            [e.target.name]:e.target.value
+        })
 
-    const handlePhone = (e) => {
-        setPhone(e.target.value);
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        createOreder(values)
     }
 
     return (
@@ -129,22 +119,22 @@ export const CheckoutView = () => {
 
                             <div className='form__field'>
                                 <label>Nombre</label>
-                                <input value={name} onChange={handleName} className='input' type='text' placeholder='Nombre y Apellido'/>
+                                <input name='name' value={values.name} onChange={handleValues} className='input' type='text' placeholder='Nombre y Apellido' required/>
                             </div>
 
                             <div className='form__field'>
                                 <label>Mail</label>
-                                <input value={mail} onChange={handleMail} className='input' type='text' placeholder='ejemplo@mail.com'/>
+                                <input name='mail' value={values.mail} onChange={handleValues} className='input' type='text' placeholder='ejemplo@mail.com' required/>
                             </div>
 
                             <div className='form__field'>
                                 <label>Teléfono</label>
-                                <input value={phone} onChange={handlePhone} className='input' type='text' placeholder='2235111111'/>
+                                <input name='phone' value={values.phone} onChange={handleValues} className='input' type='text' placeholder='2235111111' required/>
                             </div>
 
                         <div className='buttons-cart'>
                             <button className='button'><Link to='/' className='link'>Volver</Link></button>
-                            <button type='submit' className='button' onClick={createOreder}>Finalizar</button>
+                            <button type='submit' className='button'>Finalizar</button>
                         </div>
                             
                         </form>
