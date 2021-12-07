@@ -9,6 +9,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { CartProvider } from './context/CartContext';
 import './Colors.css';
+import { CheckoutView } from './components/CheckoutView/CheckoutView';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path='/products/:category' element={<ItemListContainer />} />
           <Route path='/cart' element={<CartView />} />
+          <Route path='/checkout' element={<CheckoutView />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact' element={<ContactView />} />
 

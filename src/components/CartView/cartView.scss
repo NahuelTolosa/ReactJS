@@ -57,14 +57,14 @@
     text-align: center;
 }
 
-.empty-cart{
+.buttons-cart{
     width: 100%;
     margin-top: 50px;
     padding: 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 
-    .empty-button {
+    .button {
         font-size: 1rem;
         width: fit-content;
         display: flex;
@@ -76,8 +76,13 @@
         border: none;
         background-color: rgba(148, 148, 148, 0.418);
         transition: all 200ms;
+
+        .link{
+            color: #000;
+            text-decoration: none;
+        }
     }
-    .empty-button:hover {
+    .button:hover {
         background-color: rgba(148, 148, 148, 0.6);
         transform: scale(1.005);
     }

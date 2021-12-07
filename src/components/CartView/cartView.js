@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { BsFillTrashFill } from "react-icons/bs";
 import './cartView.scss';
+import { Link } from 'react-router-dom';
 
 export const CartView = () => {
 
@@ -71,8 +72,9 @@ export const CartView = () => {
                 <hr />
 
                 {/* Muestra de boton de vaciar carrito */}
-                <div className= 'empty-cart'>
-                    <button className='empty-button' onClick={emptyCart}>Vaciar Carrito</button>
+                <div className= 'buttons-cart'>
+                    <button className='button' onClick={emptyCart}>Vaciar Carrito</button>
+                    <button className='button'><Link to='/checkout' className='link'>Finalizar</Link></button>
                 </div>
             </div>
 
