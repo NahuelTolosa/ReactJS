@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
-import {Timestamp,collection,addDoc} from 'firebase/firestore/lite';
+import { Timestamp, collection, addDoc, doc, getDoc, updateDoc} from 'firebase/firestore/lite';
 import { database } from '../Firebase/Config';
-import './Checkout.scss';
 import { Link } from 'react-router-dom';
+import './Checkout.scss';
 
 export const CheckoutView = () => {
 
@@ -11,7 +11,7 @@ export const CheckoutView = () => {
 
     const [values, setValues] = useState({name:'',mail:'',phone:''});
 
-    const { cart, totalCart, emptyCart} = useContext(CartContext);
+    const {cart, totalCart, emptyCart} = useContext(CartContext);
 
     const createOreder = (buyer) => {
         const order = {
@@ -21,12 +21,23 @@ export const CheckoutView = () => {
             date: Timestamp.fromDate(new Date())
         }    
 
+        const productsRef = collection(database,'products');
         const ordersRef = collection(database,'orders');
+
+        cart.forEach(product => {
+            const docRef = doc(productsRef, product.id);
+            getDoc(docRef)
+                .then((document) => {
+                    updateDoc(document.ref, {
+                        stock: document.data().stock - product.quantity
+                    });
+                });
+        });
 
         addDoc(ordersRef, order)
             .then((ans) =>{
-                alert('Orden realizada con éxito');
                 setOrderID(ans.id);
+                alert('Orden realizada con éxito');
             });
 
     }
@@ -42,7 +53,7 @@ export const CheckoutView = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        createOreder(values)
+        createOreder(values);
     }
 
     return (
