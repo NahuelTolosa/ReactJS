@@ -8,8 +8,8 @@ import { ContactView } from './components/ContactView/ContactView';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { CartProvider } from './context/CartContext';
-import './Colors.css';
 import { CheckoutView } from './components/CheckoutView/CheckoutView';
+import './Colors.css';
 
 function App() {
 
