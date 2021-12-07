@@ -86,12 +86,21 @@ button {
 .option{
     border: 1px solid #80808096;
     background-color: #80808018;
-    transition: all 200ms;
+    transition: all 200ms;    
+}
+
+.back {
+    margin-top: 25px !important;
+    .link {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
 .item-container__option:hover{
     border: 1px solid #80808096;
     background-color: #80808031;
+
     .option__button{
         font-weight: bold;
     }

@@ -1,29 +1,9 @@
 import React, { useContext } from "react";
-import './Item.scss';
-import { ItemCount } from "../ItemCount/ItemCount";
-import { useCounter } from "../Hook/useCounter";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import './Item.scss';
 
 export const Item = ({product}) => {
-
-    const { addToCart, isOnCart } = useContext(CartContext);
-
-    const { counter, increment, decrement } = useCounter(1, product.stock);
-
-    const handlerAdd = () => {
-        addToCart({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            description: product.description,
-            quantity: counter
-        });
-        // alert('Producto agregado al carrito.');
-    }
-
-    const checkCart = (id) => {
-        return isOnCart(id);
-    } 
 
     return (
         <div className = 'img-containter'>
@@ -33,14 +13,8 @@ export const Item = ({product}) => {
             <div className = 'img-containter__info'>
                 <h2>{product.name}</h2>
                 <h4>${product.price}</h4>
-                <ItemCount 
-                    increment ={increment} 
-                    decrement={decrement} 
-                    onAdd={handlerAdd}
-                    checkCart={checkCart}
-                    product={product}
-                    counter={counter}
-                />
+                <button className='more'><Link className="link" to={`/item/${product.id}`}>Ver mas</Link></button>
+                
             </div>
         </div>
     );

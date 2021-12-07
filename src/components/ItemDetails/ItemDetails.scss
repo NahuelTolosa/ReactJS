@@ -1,0 +1,43 @@
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    --items: 2;
+
+    .image{
+        width: calc(100% / var(--items));
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+        }
+    }
+
+    .aside{
+        width: calc(100% / var(--items));
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .info {
+
+            > * span {
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.472);
+            }
+            
+            h5 {
+                font-size: 1.6rem;
+                margin: auto;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            h6 {
+                font-size: 1.3rem;
+                padding: 10px;
+            }
+        }
+    }
+}

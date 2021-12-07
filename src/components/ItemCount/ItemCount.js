@@ -30,12 +30,16 @@ export const ItemCount = ({ increment, decrement, onAdd, checkCart, product, cou
                     <div className='item-container__option option'>
                         <button className='option__button' onClick={onAdd}>Agregar al carrito</button>
                     </div>
+
                 </div>)
             
                 :(<div className='item-container__option option'>
                     <Link class="option__button" to='/cart'>Ver Carrito</Link>
                 </div>)
             }
+            <div className='item-container__option option back'>
+                <button className='option__button'><Link className='link' to='/'>Volver al Inicio</Link></button>
+            </div>
         </div>
         
     );

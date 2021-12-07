@@ -1,12 +1,53 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { useCounter } from "../Hook/useCounter";
+import { ItemCount } from "../ItemCount/ItemCount";
+import './ItemDetails.scss';
 
-export const ItemDetails = ({item}) => {
+export const ItemDetails = ({ product }) => {
+
+    const { addToCart, isOnCart } = useContext(CartContext);
+    const { counter, increment, decrement } = useCounter(1, product.stock);
+
+    const handlerAdd = () => {
+        addToCart({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            description: product.description,
+            quantity: counter
+        });
+        // alert('Producto agregado al carrito.');
+    }
+
+    const checkCart = (id) => {
+        return isOnCart(id);
+    }
 
     return (
-        <div>
-            <h6>Name: {item.name}</h6>
-            <h6>Description: {item.description}</h6>
-            <h6>Stock: {item.stock}</h6>
+        <div className='details'>
+            <div className='image'>
+                <img src={`../${product.image}`} alt={product.description}></img>
+            </div>
+
+            <div className='aside'>
+                <div className='info'>
+                    <h5>Name: <span>{product.name}</span></h5>
+                    <hr/>
+                    <h6>Description: <span>{product.description}</span></h6>
+                    <h6>Precio: <span>${product.price}</span></h6>
+                    <h6>Disponibilidad: <span>{product.stock} unidades</span></h6>
+                </div>
+                <ItemCount 
+                        increment ={increment} 
+                        decrement={decrement} 
+                        onAdd={handlerAdd}
+                        checkCart={checkCart}
+                        product={product}
+                        counter={counter}
+                />
+            </div>
+           
         </div>
     );
 }

@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { GetItemById } from '../Utils/GetItems.js';
 import { ItemDetails } from '../ItemDetails/ItemDetails.js'
+import { useParams } from 'react-router';
 
 export const ItemDetailsContainer = () => {
-
-    const [item,setItem] = useState(null);
+    
+    const [product,setProduct] = useState(null);
+    const { id } = useParams();
 
     useEffect(()=> {
-        GetItemById("B01")
-            .then(ans => setItem(ans))
+        GetItemById(id)
+            .then(ans => setProduct(ans))
     }, []);
 
+    console.log(product);
+
     return (
-        <div>
+        <div className='main'>
         {
-           item && <ItemDetails item = {item} />
+                product && <ItemDetails product={product} />
         }
         </div>
     );
