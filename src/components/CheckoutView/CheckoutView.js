@@ -135,7 +135,7 @@ export const CheckoutView = () => {
 
                             <div className='form__field'>
                                 <label>Mail</label>
-                                <input name='mail' value={values.mail} onChange={handleValues} className='input' type='text' placeholder='ejemplo@mail.com' required/>
+                                <input name='mail' value={values.mail} onChange={handleValues} className='input' type='email' placeholder='ejemplo@mail.com' required/>
                             </div>
 
                             <div className='form__field'>
