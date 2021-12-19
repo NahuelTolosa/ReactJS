@@ -30,9 +30,6 @@ export const NavBar = () => {
                         <li class="nav-item">
                             <Link class="nav-link" to='/about'>About Us</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to='/contact'>Contact</Link>
-                        </li>
                     </ul>
 
                     <Link className='cart-logo' to='/cart'><CartWidget /></Link>
